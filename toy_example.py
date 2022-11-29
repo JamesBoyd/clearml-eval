@@ -2,7 +2,7 @@ import tensorflow as tf
 import argparse
 
 from clearml import Task
-task = Task.init(project_name='Evaluation Project', task_name='Tensorflow Training')
+task = Task.init(project_name='Evaluation Project', task_name='Tensorflow Training', reuse_last_task_id=False)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dropout-rate", type=float, default=0.2)
